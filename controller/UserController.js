@@ -54,7 +54,7 @@ const UserController = {
         if(user.password != password){
             return response.status(404).send('Password not match');
         }
-        response.send(user);
+        response.status(200).send("User Login Successfully");
         }catch(error){
             return response.status(500).send("Internal Server Error");
         }
